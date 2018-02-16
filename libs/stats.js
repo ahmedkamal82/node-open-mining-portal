@@ -208,7 +208,7 @@ module.exports = function(logger, portalConfig, poolConfigs){
 
                 var shareMultiplier = Math.pow(2, 32) / algos[coinStats.algorithm].multiplier;
                 coinStats.hashrate = shareMultiplier * coinStats.shares / portalConfig.website.stats.hashrateWindow;
-
+//console.log("kim:  "+shareMultiplier + " window: " + portalConfig.website.stats.hashrateWindow  +" shares: %j",coinStats);
                 coinStats.workerCount = Object.keys(coinStats.workers).length;
                 portalStats.global.workers += coinStats.workerCount;
 
